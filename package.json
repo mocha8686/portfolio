@@ -11,15 +11,20 @@
 		"lint": "biome check --apply . && stylelint --fix --aei \"**/*.{css,scss}\""
 	},
 	"dependencies": {
-		"astro": "^4.7.1"
+		"@astrojs/svelte": "^5.4.0",
+		"astro": "^4.7.1",
+		"svelte": "5.0.0-next.123"
 	},
 	"devDependencies": {
+		"@astrojs/check": "^0.5.10",
 		"@biomejs/biome": "^1.7.2",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0",
+		"sass": "^1.76.0",
 		"stylelint": "^16.5.0",
 		"stylelint-config-clean-order": "^5.4.2",
 		"stylelint-config-html": "^1.1.0",
 		"stylelint-config-standard-scss": "^13.1.0",
-		"@astrojs/check": "^0.5.10",
 		"typescript": "^5.4.5"
 	}
 }
