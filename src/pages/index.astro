@@ -1,9 +1,15 @@
 ---
-import Test from '../components/Test.svelte';
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
 ---
 
 <Layout title="Hello, world!">
-	<h1>Stinky cheese</h1>
-	<Test client:load />
+	<Hero />
+	<p class="test">Content</p>
 </Layout>
+
+<style>
+	.test {
+		height: 100svh;
+	}
+</style>

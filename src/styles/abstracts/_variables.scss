@@ -1,0 +1,14 @@
+$font-stack-main: sans-serif;
+$font-stack-code: monospace;
+
+$font-size-title: 2rem;
+$font-size-subtitle: 1.25rem;
+$font-size-main: 1rem;
+
+$colors: (
+	neutral: (
+		base: hsl(0deg 0% 10%),
+		light: hsl(0deg 0% 93%),
+		dark: hsl(0deg 0% 2%),
+	)
+);

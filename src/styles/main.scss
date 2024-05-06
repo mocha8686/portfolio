@@ -1,7 +1,4 @@
-* {
-	box-sizing: border-box;
-}
+@use 'base/base';
+@use 'base/typography';
 
-:root {
-	font: inherit;
-}
+@use 'layout/hero';

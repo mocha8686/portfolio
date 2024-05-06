@@ -1,0 +1,65 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.hero {
+	position: relative;
+	height: 100svh;
+	background-color: clr(neutral, dark);
+
+	& > * {
+		padding: 1rem;
+	}
+
+	a {
+		font-family: $font-stack-code;
+		font-size: $font-size-subtitle;
+		color: clr(neutral, light);
+		text-decoration-color: transparent;
+		text-transform: lowercase;
+
+		opacity: 0.8;
+
+		transition: all 100ms ease;
+
+		&:hover {
+			text-decoration-color: initial;
+			opacity: 1;
+		}
+	}
+
+	.logo {
+		margin: 0;
+		font-family: $font-stack-code;
+		text-transform: uppercase;
+	}
+
+	.nav {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+
+		text-align: right;
+	}
+
+	.social {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		a {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 0.5em;
+			font-size: $font-size-main;
+		}
+	}
+}
