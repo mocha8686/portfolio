@@ -3,17 +3,12 @@
 
 .hero {
 	display: grid;
-	grid-template-areas:
-		'logo . nav'
-		'. . .'
-		'social . .';
-	grid-template-rows: repeat(3, 1fr);
-
+	grid-template:
+		'logo . nav' 1fr
+		'. . .' 1fr
+		'social . .' 1fr / 1fr 1fr 1fr;
 	height: 100svh;
-
 	font-family: $font-stack-code;
-
-	background-color: clr(neutral, dark);
 
 	& > * {
 		padding: 1rem;
@@ -42,7 +37,7 @@
 	}
 
 	.typewriter-container {
-		grid-area: 1 / 1 / 4 / 4;
+		grid-area: 1 / 1 / -1 / -1;
 		place-self: center;
 		font-size: $font-size-subtitle;
 		text-align: center;
@@ -75,6 +70,24 @@
 			flex-direction: row;
 			gap: 0.5em;
 			align-items: center;
+		}
+	}
+
+	.down {
+		pointer-events: none;
+
+		position: sticky;
+
+		display: grid;
+		grid-area: -2 / 1 / -1 / -1;
+		place-items: self-end center;
+
+		background: radial-gradient(200% 70% at bottom, #fff2, #fff0 30%);
+
+		transition: opacity 100ms ease;
+
+		&.hidden {
+			opacity: 0;
 		}
 	}
 }

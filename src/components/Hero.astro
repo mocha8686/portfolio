@@ -15,7 +15,7 @@ const iconSize = 32;
 		<a href="#">Contact</a>
 	</nav>
 	<nav class="social">
-		<a href="https://github.com/mocha8686">
+		<a href="https://github.com/mocha8686" target="_blank">
 			<Icon name="iconoir:github" size={iconSize} />
 			GitHub
 		</a>
@@ -24,4 +24,18 @@ const iconSize = 32;
 			Email
 		</a>
 	</nav>
+	<div class="down">
+		<Icon name="iconoir:nav-arrow-down" size={iconSize} />
+	</div>
 </div>
+
+<script>
+	document.addEventListener('scroll', () => {
+		const classList = document.querySelector('.down')?.classList;
+		if (window.scrollY > 0) {
+			classList?.add('hidden');
+		} else {
+			classList?.remove('hidden');
+		}
+	});
+</script>
