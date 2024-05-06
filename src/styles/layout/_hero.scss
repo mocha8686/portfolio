@@ -2,8 +2,17 @@
 @use '../abstracts/variables' as *;
 
 .hero {
-	position: relative;
+	display: grid;
+	grid-template-areas:
+		'logo . nav'
+		'. . .'
+		'social . .';
+	grid-template-rows: repeat(3, 1fr);
+
 	height: 100svh;
+
+	font-family: $font-stack-code;
+
 	background-color: clr(neutral, dark);
 
 	& > * {
@@ -11,7 +20,6 @@
 	}
 
 	a {
-		font-family: $font-stack-code;
 		font-size: $font-size-subtitle;
 		color: clr(neutral, light);
 		text-decoration-color: transparent;
@@ -28,17 +36,27 @@
 	}
 
 	.logo {
+		grid-area: logo;
 		margin: 0;
-		font-family: $font-stack-code;
 		text-transform: uppercase;
 	}
 
-	.nav {
-		position: absolute;
-		top: 0;
-		right: 0;
+	.typewriter-container {
+		grid-area: 1 / 1 / 4 / 4;
+		place-self: center;
+		font-size: $font-size-subtitle;
+		text-align: center;
 
+		.typewriter {
+			display: block;
+			font-size: $font-size-title * 2;
+			text-transform: uppercase;
+		}
+	}
+
+	.nav {
 		display: flex;
+		grid-area: nav;
 		flex-direction: column;
 		gap: 0.5em;
 
@@ -46,20 +64,17 @@
 	}
 
 	.social {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-
 		display: flex;
+		grid-area: social;
 		flex-direction: column;
+		place-self: self-end normal;
 		align-items: flex-start;
 
 		a {
 			display: flex;
 			flex-direction: row;
-			align-items: center;
 			gap: 0.5em;
-			font-size: $font-size-main;
+			align-items: center;
 		}
 	}
 }
