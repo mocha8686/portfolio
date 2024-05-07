@@ -12,6 +12,8 @@
 	},
 	"dependencies": {
 		"@astrojs/svelte": "^5.4.0",
+		"@fontsource-variable/akshar": "^5.0.13",
+		"@fontsource-variable/victor-mono": "^5.0.5",
 		"@iconify-json/iconoir": "^1.1.44",
 		"astro": "^4.7.1",
 		"astro-icon": "^1.1.0",

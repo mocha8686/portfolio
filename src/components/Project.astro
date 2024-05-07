@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+
+const { data, slug } = project;
+
+const formatDate = (date: Date) => {
+	const y = date.getFullYear();
+	const m = date.getMonth().toString().padStart(2, '0');
+	const d = date.getDay().toString().padStart(2, '0');
+	return `${y}/${m}/${d}` as const;
+};
+
+const date = formatDate(new Date(data.date));
+---
+
+<li class="project">
+	<h1 class="title">{data.title}</h1>
+	<time datetime={date}>{date}</time>
+	<p class="description">{data.description}</p>
+	<div class="img-container">
+		<img src={data.image.url} alt={data.image.alt} />
+	</div>
+	<a class="link" href={`/projects/${slug}`}>Read more</a>
+</li>

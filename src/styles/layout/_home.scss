@@ -1,0 +1,18 @@
+@use '../abstracts/functions' as *;
+
+.project-list-title,
+.project-list {
+	margin-inline: 2rem;
+}
+
+.project-list-title {
+	margin-block-start: 0;
+	margin-block-end: 2em;
+	text-decoration: underline dotted clr(primary);
+}
+
+.project-list {
+	margin-block: 0;
+	padding: 0;
+	list-style: none;
+}

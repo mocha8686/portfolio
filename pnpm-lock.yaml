@@ -8,6 +8,12 @@ dependencies:
   '@astrojs/svelte':
     specifier: ^5.4.0
     version: 5.4.0(astro@4.7.1)(svelte@5.0.0-next.123)(typescript@5.4.5)(vite@5.2.11)
+  '@fontsource-variable/akshar':
+    specifier: ^5.0.13
+    version: 5.0.13
+  '@fontsource-variable/victor-mono':
+    specifier: ^5.0.5
+    version: 5.0.5
   '@iconify-json/iconoir':
     specifier: ^1.1.44
     version: 1.1.44
@@ -782,6 +788,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource-variable/akshar@5.0.13:
+    resolution: {integrity: sha512-OPN/wTIkVuGqEunW6XGxC1FwiVrMRAVMpeQnYKTWaYg6MMaKnPyD/K/lPBETNeXhNi9oAD9a+Wu6BaVPj7AzDg==}
+    dev: false
+
+  /@fontsource-variable/victor-mono@5.0.5:
+    resolution: {integrity: sha512-Cnz34ZyorqWKDP/QxCq0yaYHfpeAohtOJBW6k5N1eHBdnaOl9hhqFRd4GBZ7EyjaAviJ+ze3LjHq8Ka1InqqAg==}
+    dev: false
 
   /@iconify-json/iconoir@1.1.44:
     resolution: {integrity: sha512-XZZ6+nIgS3BUWTmIvZ1Um/TZcUsOEVDGOTZ50hihoTWYjfLLmPlxS/jxrTTpjJO/98wbyiDz4WOXFGqBrXMLPw==}

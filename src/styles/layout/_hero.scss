@@ -20,18 +20,7 @@
 
 	a {
 		font-size: $font-size-subtitle;
-		color: clr(neutral, light);
-		text-decoration-color: transparent;
 		text-transform: lowercase;
-
-		opacity: 0.8;
-
-		transition: all 100ms ease;
-
-		&:hover {
-			text-decoration-color: initial;
-			opacity: 1;
-		}
 	}
 
 	.logo {

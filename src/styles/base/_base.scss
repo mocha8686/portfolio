@@ -2,17 +2,30 @@
 @use '../abstracts/variables' as *;
 
 :root {
-	box-sizing: border-box;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 body {
 	margin: 0;
-	font-size: $font-size-main;
 	background-color: clr(neutral);
+}
+
+a {
+	color: clr(neutral, light);
+	text-decoration-color: transparent;
+	opacity: 0.8;
+	transition: all 150ms ease;
+
+	&:hover {
+		text-decoration-color: initial;
+		opacity: 1;
+		color: clr(primary, light);
+	}
 }

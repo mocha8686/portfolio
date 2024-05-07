@@ -1,4 +1,8 @@
 @use 'base/base';
 @use 'base/typography';
 
+@use 'layout/home';
 @use 'layout/hero';
+@use 'layout/project';
+
+@use 'components/project';

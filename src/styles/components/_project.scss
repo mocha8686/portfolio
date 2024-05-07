@@ -1,0 +1,53 @@
+@use '../abstracts/functions' as *;
+
+.project {
+	display: grid;
+	grid-template:
+		'image' min-content
+		'title' min-content
+		'date' min-content
+		'description' min-content
+		'link' min-content / 1fr;
+
+	.img-container {
+		overflow: hidden;
+		grid-area: image;
+		aspect-ratio: 1920 / 1080;
+		max-width: 100%;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.title {
+		grid-area: title;
+		margin: 0;
+	}
+
+	time {
+		grid-area: date;
+		opacity: 0.4;
+	}
+
+	.description {
+		grid-area: description;
+		margin-block: 0.5em 1em;
+	}
+
+	.link {
+		grid-area: link;
+
+		width: max-content;
+		margin-block-end: 10rem;
+		padding: 0.25em 0.75em;
+
+		background: clr(neutral, dark);
+		border: 2px solid clr(primary, dark);
+		border-radius: 0.5rem;
+
+		&::after {
+			content: ' >>>';
+		}
+	}
+}

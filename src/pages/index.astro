@@ -1,15 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
+import Layout from '@layouts/Layout.astro';
+import Hero from '@components/Hero.astro';
+import ProjectList from '@components/ProjectList.astro';
 ---
 
-<Layout title="Hello, world!">
+<Layout title="Portfolio">
 	<Hero />
-	<p class="test">Content</p>
+	<ProjectList />
 </Layout>
-
-<style>
-	.test {
-		height: 100svh;
-	}
-</style>
