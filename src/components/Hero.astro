@@ -25,13 +25,15 @@ const iconSize = 32;
 		</a>
 	</nav>
 	<div class="down">
-		<Icon name="iconoir:nav-arrow-down" size={iconSize} />
+		<div class="arrow-container">
+			<Icon name="iconoir:nav-arrow-down" size={iconSize} />
+		</div>
 	</div>
 </div>
 
 <script>
 	document.addEventListener('scroll', () => {
-		const classList = document.querySelector('.down')?.classList;
+		const classList = document.querySelector('.arrow-container')?.classList;
 		if (window.scrollY > 0) {
 			classList?.add('hidden');
 		} else {

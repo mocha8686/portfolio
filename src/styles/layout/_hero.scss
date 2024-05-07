@@ -7,8 +7,12 @@
 		'logo . nav' 1fr
 		'. . .' 1fr
 		'social . .' 1fr / 1fr 1fr 1fr;
+
 	height: 100svh;
+
 	font-family: $font-stack-code;
+
+	background-color: clr(neutral, dark);
 
 	& > * {
 		padding: 1rem;
@@ -59,6 +63,8 @@
 	}
 
 	.social {
+		z-index: 1;
+
 		display: flex;
 		grid-area: social;
 		flex-direction: column;
@@ -82,12 +88,14 @@
 		grid-area: -2 / 1 / -1 / -1;
 		place-items: self-end center;
 
-		background: radial-gradient(200% 70% at bottom, #fff2, #fff0 30%);
+		background: linear-gradient(to top, clr(neutral) 7%, #0000 30%);
 
-		transition: opacity 100ms ease;
+		.arrow-container {
+			transition: opacity 250ms ease;
 
-		&.hidden {
-			opacity: 0;
+			&.hidden {
+				opacity: 0;
+			}
 		}
 	}
 }
