@@ -1,19 +1,22 @@
 $font-stack-main: 'Akshar Variable', sans-serif;
 $font-stack-code: 'Viktor Mono Variable', monospace;
-
 $font-size-title: 2rem;
 $font-size-subtitle: 1.25rem;
 $font-size-main: 1rem;
-
 $colors: (
 	neutral: (
-		base: hsl(0 0% 5%),
+		base: hsl(0deg 0% 5%),
 		light: hsl(0deg 0% 93%),
 		dark: hsl(0deg 0% 2%),
 	),
 	primary: (
-		base: hsl(204 40% 29%),
-		light: hsl(202 25% 51%),
-		dark: hsl(207 42% 13%),
+		base: hsl(204deg 40% 29%),
+		light: hsl(202deg 25% 51%),
+		dark: hsl(207deg 42% 13%),
 	),
+);
+$breakpoints: (
+	small: 320px,
+	medium: 768px,
+	large: 1024px,
 );

@@ -3,6 +3,6 @@
 
 @use 'layout/home';
 @use 'layout/hero';
-@use 'layout/project';
+@use 'layout/project' as projectLayout;
 
 @use 'components/project';

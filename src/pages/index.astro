@@ -4,7 +4,10 @@ import Hero from '@components/Hero.astro';
 import ProjectList from '@components/ProjectList.astro';
 ---
 
-<Layout title="Portfolio">
+<Layout title="Portfolio" page="home">
 	<Hero />
-	<ProjectList />
+	<main>
+		<ProjectList />
+		<div style="margin-block-end: 25em;">Temp</div>
+	</main>
 </Layout>

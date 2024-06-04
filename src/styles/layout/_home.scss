@@ -1,12 +1,17 @@
 @use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
 
-.project-list-title,
-.project-list {
+.home main {
 	margin-inline: 2rem;
+
+	@include media('>medium') {
+		margin-inline: auto;
+		max-width: calc(40ch + 30rem);
+	}
 }
 
 .project-list-title {
-	margin-block-start: 0;
+	margin-block-start: 1em;
 	margin-block-end: 2em;
 	text-decoration: underline dotted clr(primary);
 }
@@ -15,4 +20,5 @@
 	margin-block: 0;
 	padding: 0;
 	list-style: none;
+	justify-self: center;
 }
