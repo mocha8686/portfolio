@@ -1,7 +1,7 @@
 <script lang="ts">
 	let text = $state('developer');
 
-	const titles = ['developer', 'designer'];
+	const titles = ['developer', 'designer', 'specialist', 'enthusiast', 'hacker', 'tinkerer'];
 	const maxLength = titles.reduce((acc, str) => Math.max(acc, str.length), 0);
 
 	const delayStart = 500;
@@ -19,6 +19,7 @@
 		const interval = setInterval(() => {
 			if (out) {
 				const currentText = titles[index];
+
 				text = currentText
 					.split('')
 					.map((_, i) => (i >= iteration ? currentText[i] : randomChar()))
