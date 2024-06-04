@@ -30,13 +30,19 @@
 					animation(index + 1);
 				}
 			} else {
-				const currentText = titles[index % titles.length].padEnd(maxLength, ' ');
-				text = currentText
+				const currentText = titles[index % titles.length];
+				const length = currentText.length;
+				const padStart = Math.ceil((maxLength - length) / 2) + length;
+				const currentTextPadded = currentText.padStart(padStart, ' ').padEnd(maxLength, ' ');
+
+				text = currentTextPadded
 					.split('')
-					.map((_, i) => (i < iteration - delayStartIterations ? currentText[i] : randomChar()))
+					.map((_, i) =>
+						i < iteration - delayStartIterations ? currentTextPadded[i] : randomChar(),
+					)
 					.join('');
 
-				if (iteration - delayStartIterations >= currentText.length) {
+				if (iteration - delayStartIterations >= currentTextPadded.length) {
 					clearInterval(interval);
 					setTimeout(() => animation(index, true), delayEnd);
 				}
