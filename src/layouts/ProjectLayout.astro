@@ -1,0 +1,29 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Layout from './Layout.astro';
+import Navigation from '@components/Navigation.astro';
+
+interface Props {
+	data: CollectionEntry<'projects'>['data'];
+}
+
+const {
+	data: { title, date, image },
+} = Astro.props;
+---
+
+<Layout title={`${title} | Portfolio`}>
+	<Navigation />
+
+	<header class="project-layout-header">
+		<h1 class="title">{title}</h1>
+		<time datetime={date}>{date}</time>
+		<div class="img-container">
+			<img src={image.url} alt={image.alt} />
+		</div>
+	</header>
+
+	<main class="project-layout-main">
+		<slot />
+	</main>
+</Layout>
