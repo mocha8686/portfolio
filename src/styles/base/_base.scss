@@ -2,30 +2,30 @@
 @use '../abstracts/variables' as *;
 
 :root {
-	overflow-x: hidden;
-	scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	background-color: clr(neutral);
+  margin: 0;
+  background-color: clr(neutral);
 }
 
 a {
-	color: clr(neutral, light);
-	text-decoration-color: transparent;
-	opacity: 0.8;
-	transition: all 150ms ease;
+  color: clr(neutral, light);
+  text-decoration-color: transparent;
+  opacity: 0.8;
+  transition: all 150ms ease;
 
-	&:hover {
-		text-decoration-color: initial;
-		opacity: 1;
-		color: clr(primary, light);
-	}
+  &:hover {
+    text-decoration-color: initial;
+    opacity: 1;
+    color: clr(primary, light);
+  }
 }

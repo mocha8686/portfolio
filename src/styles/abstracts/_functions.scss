@@ -2,14 +2,14 @@
 @use 'variables';
 
 @function clr($base, $shade: base) {
-	@if not map.has_key(variables.$colors, $base) {
-		@error "#{$base} is not in colors. Possible values are: #{map.keys(variables.$colors)}"
-	}
-	@if $shade != base and $shade != light and $shade != dark {
-		@error "Property #{$shade} must be one of base, light, or dark.";
-	}
+  @if not map.has_key(variables.$colors, $base) {
+    @error "#{$base} is not in colors. Possible values are: #{map.keys(variables.$colors)}"
+  }
+  @if $shade != base and $shade != light and $shade != dark {
+    @error "Property #{$shade} must be one of base, light, or dark.";
+  }
 
-	$color: map.get(variables.$colors, $base, $shade);
+  $color: map.get(variables.$colors, $base, $shade);
 
-	@return $color;
+  @return $color;
 }

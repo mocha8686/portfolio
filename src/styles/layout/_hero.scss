@@ -2,89 +2,89 @@
 @use '../abstracts/variables' as *;
 
 .hero {
-	display: grid;
-	grid-template:
-		'logo . nav' 1fr
-		'. . .' 1fr
-		'social . .' 1fr / 1fr 1fr 1fr;
+  display: grid;
+  grid-template:
+    'logo . nav' 1fr
+    '. . .' 1fr
+    'social . .' 1fr / 1fr 1fr 1fr;
 
-	height: 100svh;
+  height: 100dvh;
 
-	font-family: $font-stack-code;
+  font-family: $font-stack-code;
 
-	background-color: clr(neutral, dark);
+  background-color: clr(neutral, dark);
 
-	& > * {
-		padding: 1rem;
-	}
+  & > * {
+    padding: 1rem;
+  }
 
-	a {
-		font-size: $font-size-subtitle;
-		text-transform: lowercase;
-	}
+  a {
+    font-size: $font-size-subtitle;
+    text-transform: lowercase;
+  }
 
-	.logo {
-		grid-area: logo;
-		margin: 0;
-		text-transform: uppercase;
-	}
+  .logo {
+    grid-area: logo;
+    margin: 0;
+    text-transform: uppercase;
+  }
 
-	.typewriter-container {
-		grid-area: 1 / 1 / -1 / -1;
-		place-self: center;
-		font-size: $font-size-subtitle;
-		text-align: center;
+  .typewriter-container {
+    grid-area: 1 / 1 / -1 / -1;
+    place-self: center;
+    font-size: $font-size-subtitle;
+    text-align: center;
 
-		.typewriter {
-			display: block;
-			font-size: clamp(3.5rem, 5vw + 2rem, 5rem);
-			text-transform: uppercase;
-		}
-	}
+    .typewriter {
+      display: block;
+      font-size: clamp(3.5rem, 5vw + 2rem, 5rem);
+      text-transform: uppercase;
+    }
+  }
 
-	.nav {
-		display: flex;
-		grid-area: nav;
-		flex-direction: column;
-		gap: 0.5em;
+  .nav {
+    display: flex;
+    grid-area: nav;
+    flex-direction: column;
+    gap: 0.5em;
 
-		text-align: right;
-	}
+    text-align: right;
+  }
 
-	.social {
-		z-index: 1;
+  .social {
+    z-index: 1;
 
-		display: flex;
-		grid-area: social;
-		flex-direction: column;
-		place-self: self-end normal;
-		align-items: flex-start;
+    display: flex;
+    grid-area: social;
+    flex-direction: column;
+    place-self: self-end normal;
+    align-items: flex-start;
 
-		a {
-			display: flex;
-			flex-direction: row;
-			gap: 0.5em;
-			align-items: center;
-		}
-	}
+    a {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+      align-items: center;
+    }
+  }
 
-	.down {
-		pointer-events: none;
+  .down {
+    pointer-events: none;
 
-		position: sticky;
+    position: sticky;
 
-		display: grid;
-		grid-area: -2 / 1 / -1 / -1;
-		place-items: self-end center;
+    display: grid;
+    grid-area: -2 / 1 / -1 / -1;
+    place-items: self-end center;
 
-		background: linear-gradient(to top, clr(neutral) 7%, #0000 30%);
+    background: linear-gradient(to top, clr(neutral) 7%, #0000 30%);
 
-		.arrow-container {
-			transition: opacity 250ms ease;
+    .arrow-container {
+      transition: opacity 250ms ease;
 
-			&.hidden {
-				opacity: 0;
-			}
-		}
-	}
+      &.hidden {
+        opacity: 0;
+      }
+    }
+  }
 }
