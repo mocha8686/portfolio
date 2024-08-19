@@ -1,7 +1,7 @@
 <script lang="ts">
 	let text = $state('developer');
 
-	const titles = ['developer', 'designer', 'specialist', 'enthusiast', 'hacker', 'tinkerer'];
+	const titles = ['developer', 'designer', 'enthusiast', 'tinkerer'];
 	const maxLength = titles.reduce((acc, str) => Math.max(acc, str.length), 0);
 
 	const delayStart = 500;
