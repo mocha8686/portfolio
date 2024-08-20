@@ -1,13 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components';
-import Typewriter from './Typewriter.svelte';
+import { Image } from 'astro:assets';
 import Navigation from './Navigation.astro';
+import Typewriter from './Typewriter.svelte';
+import logo from '../assets/logo.webp';
 
-const iconSize = 32;
+const iconSize = 48;
 ---
 
 <div class="hero">
-	<h1 class="logo">Logo</h1>
+	<a href="#" class="logo">
+		<Image src={logo} alt="Coffee cup with an M" />
+	</a>
 	<Typewriter client:load />
 	<Navigation hero={true} />
 	<nav class="social">
