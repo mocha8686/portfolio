@@ -8,7 +8,7 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "biome check --apply . && stylelint --fix --aei \"**/*.{css,scss}\""
+		"lint": "biome check --write . && stylelint --fix --aei \"**/*.{css,scss}\""
 	},
 	"dependencies": {
 		"@astrojs/svelte": "^5.7.0",

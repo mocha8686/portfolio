@@ -2,8 +2,8 @@
 @use '../abstracts/variables' as *;
 
 :root {
-  overflow-x: hidden;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *,
@@ -24,8 +24,8 @@ a {
   transition: all 150ms ease;
 
   &:hover {
+    color: clr(primary, light);
     text-decoration-color: initial;
     opacity: 1;
-    color: clr(primary, light);
   }
 }

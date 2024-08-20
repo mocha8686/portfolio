@@ -24,10 +24,12 @@
   }
 
   .logo {
-    place-self: start;
     grid-area: logo;
+    place-self: start;
+
     margin: 1rem;
     padding: 0;
+
     text-transform: uppercase;
   }
 

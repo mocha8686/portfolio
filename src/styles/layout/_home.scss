@@ -5,20 +5,19 @@
   margin-inline: 2rem;
 
   @include media('>medium') {
-    margin-inline: auto;
     max-width: calc(40ch + 30rem);
+    margin-inline: auto;
   }
 }
 
 .project-list-title {
-  margin-block-start: 1em;
-  margin-block-end: 2em;
+  margin-block: 1em 2em;
   text-decoration: underline dotted clr(primary);
 }
 
 .project-list {
+  justify-self: center;
   margin-block: 0;
   padding: 0;
   list-style: none;
-  justify-self: center;
 }
