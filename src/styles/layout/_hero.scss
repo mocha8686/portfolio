@@ -82,10 +82,16 @@
     background: linear-gradient(to top, clr(neutral) 7%, #0000 30%);
 
     .arrow-container {
-      transition: opacity 250ms ease;
+      animation: 1s cubic-bezier(0,.6,.4,1) 5s infinite backwards alternate blink;
 
-      &.hidden {
-        opacity: 0;
+      @keyframes blink {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
       }
     }
   }
